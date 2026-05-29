@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: db-config
+data:
+  host: "127.0.0.1"
+  port: "3306"
+  user: "root"
+  database: "mysql"
+
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  config.ini: |
+    [database]
+    host = 127.0.0.1
+    port = 3306
+    user = root
+    password = Admin@1234
+    database = mysql
