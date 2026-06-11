@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: app2
-        image: msahique/app2:latest
+        image: msahique/k8s_app2:v1
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
