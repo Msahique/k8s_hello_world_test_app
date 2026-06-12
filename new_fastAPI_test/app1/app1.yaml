@@ -17,8 +17,9 @@ spec:
     spec:
       containers:
       - name: app1
-        #image: msahique/k8s_app1:v1
-        image: msahique/k8s_app1:v2
+        #image: msahique/k8s_app1:v1  # independent app1 and app2
+        #image: msahique/k8s_app1:v2 # app1 calling services of app2
+        image: msahique/k8s_app1:v3 # app1 calling services of mysql db
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
